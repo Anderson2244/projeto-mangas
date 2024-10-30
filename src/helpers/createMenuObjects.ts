@@ -18,7 +18,6 @@ export const createMenuObject = (activeMenu:menuOptions)=>{
     }
     if(activeMenu !== ''){
         returnObject[activeMenu] = true
-    } else {
+    } 
         return returnObject
-    }
 }
