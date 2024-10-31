@@ -1,21 +1,4 @@
-/*
-PRECISAREMOS DE 3 FUNÇÕES DIFERENTES
-
-1. PEGAR TODOS OS ITENS
-2. FILTRAR POR TIPO (ISEKAI, ETC..)
-3. FILTRAR ITENS PELO NOME
-*/
-
-type Mangatype = 'action'|'adventure'|'fantasy'|'shonen'|'supernatural'|'drama'|'thriller'|'comedy'|'romance'|'SciFi'|'suspense'
-
-type Manga = {
-    type: Mangatype,
-    image:string,
-    name:string
-}
-
-const data: Manga[] = [
-    {
+{
         type: 'action',
         image: 'Kimetsu_no_Yaiba_(capa_do_volume_1).png',
         name: 'Demon Slayer: Kimetsu no Yaiba',
@@ -48,7 +31,7 @@ const data: Manga[] = [
     {
         type: 'action',
         image: 'JoJo_no_Kimyou_na_Bouken_cover_-_vol1.jpg',
-        name: 'JoJos Bizarre Adventure',
+        name: 'JoJo's Bizarre Adventure',
     },
     {
         type: 'action',
@@ -100,18 +83,3 @@ const data: Manga[] = [
         image: 'The Quintessential Quintuplets.jpg',
         name: 'The Quintessential Quintuplets',
     },
-]
-
-export const Manga = {
-
-
-    getAll:() =>{
-        return data
-    },
-
-    getFromtype: (type: Mangatype): Manga[] =>{
-        return data.filter(item => {
-
-        })
-    }
-}
