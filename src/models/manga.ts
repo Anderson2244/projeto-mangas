@@ -6,7 +6,7 @@ PRECISAREMOS DE 3 FUNÇÕES DIFERENTES
 3. FILTRAR ITENS PELO NOME
 */
 
-type Mangatype = 'action'|'adventure'|'fantasy'|'shonen'|'supernatural'|'drama'|'thriller'|'comedy'|'romance'|'SciFi'|'suspense'
+type Mangatype = 'action'|'adventure'|'fantasy'|'shonen'|'supernatural'|'drama'|'thriller'|'comedy'|'romance'|'SciFi'|'suspense'|'isekai'
 
 type Manga = {
     type: Mangatype,
@@ -111,7 +111,21 @@ export const Manga = {
 
     getFromtype: (type: Mangatype): Manga[] =>{
         return data.filter(item => {
+            if(item.type == type){
+                return true
+            } else {
+                return false
+            }
+        })
+    },
 
+    getFromName:(name: string): Manga[]=>{
+        return data.filter(item =>{
+            if(item.name.toLowerCase().indexOf(name.toLocaleLowerCase()) > -1){
+                return true
+            } else {
+                return false
+            }
         })
     }
 }
